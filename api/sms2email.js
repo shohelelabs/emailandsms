@@ -5,8 +5,8 @@ module.exports = (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     //Set from address as <number>@EMAIL_DOMAIN
-    //const fromAddress = req.body.From.replace("+", "") + `@${process.env.EMAIL_DOMAIN}`;
-    const fromAddress = 'office365incident.dev@elabs.de';
+    const fromAddress = req.body.From.replace("+", "") + `@${process.env.EMAIL_DOMAIN}`;
+    //const fromAddress = 'office365incident.dev@elabs.de';
 
     //Create Email
     const email = {
