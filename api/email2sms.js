@@ -9,16 +9,22 @@ module.exports = async (req, res) => {
     await util.promisify(multer().any())(req, res);
 
     const from = req.body.from;
-    const to = req.body.to;
+    const toNumbers = req.body.to;
     const subject = req.body.subject;
     const body = req.body.text;
 
     //Using email-addresses library to extract email details.
-    const toAddress = addrs.parseOneAddress(to);
+    
+   //Start mobile number Iteration
+    toNumbers.forEach((toNumber) => {
+    
+    const toAddress = addrs.parseOneAddress(toNumber);
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
     const fromName = fromAddress.local;
 
+    
+    
     //Sending SMS with Twilio Client
     client.messages.create({
         to: `+${toName}`,
@@ -48,4 +54,7 @@ module.exports = async (req, res) => {
                 res.status(500);
             });
     });
+    
+  });//End of mobile number iteration
+    
 };
