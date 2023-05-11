@@ -14,10 +14,11 @@ module.exports = async (req, res) => {
     const body = req.body.text;
 
     //Using email-addresses library to extract email details.
+    console.log({toNumbers});
     
    //Start mobile number Iteration
     toNumbers.forEach((toNumber) => {
-    
+    console.log({toNumber});
     const toAddress = addrs.parseOneAddress(toNumber);
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
