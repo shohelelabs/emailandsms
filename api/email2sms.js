@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
     const from = req.body.from;
     //const toNumbers = Array.from(req.body.to);
     const toNumberobj = req.body.to;
-    const toNumbers = email-addresses.parseAddressList(toNumberobj); 
+    const toNumbers = addrs.parseAddressList(toNumberobj); 
     //const toNumbers = ["4915155067743","01785221533"];
     const subject = req.body.subject;
     const body = req.body.text;
