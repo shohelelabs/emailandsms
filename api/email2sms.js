@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
     console.log({toNumberobj});
     console.log({toNumbers});
      
-     const result = inputArray.map( (item) => item.local);
+     const result = toNumbers.map( (item) => item.local);
     console.log(result);
    //Start mobile number Iteration
     toNumbers.forEach((toNumber) => {  
