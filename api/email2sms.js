@@ -20,11 +20,11 @@ module.exports = async (req, res) => {
     console.log({toNumberobj});
     console.log({toNumbers});
      
-     
+    const numberAddresses = toNumber.map( (item) => item.address);
+    console.log(numberAddresses);
    //Start mobile number Iteration
-    toNumbers.forEach((toNumber) => {  
-    const result = toNumber.map( (item) => item.address);
-    console.log(result);
+    numberAddresses.forEach((toNumber) => {  
+   
     const toAddress = addrs.parseOneAddress(result);
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
