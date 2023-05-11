@@ -9,17 +9,18 @@ module.exports = async (req, res) => {
     await util.promisify(multer().any())(req, res);
 
     const from = req.body.from;
-    //const toNumbers = Array.from(req.body.to);
+     
     const toNumberobj = req.body.to;
     const toNumbers = addrs.parseAddressList(toNumberobj); 
-    //const toNumbers = ["4915155067743","01785221533"];
+    const distributionGroupNumbers = ["4915155067743@parse.elabs.de","491785221533@parse.elabs.de"];
     const subject = req.body.subject;
     const body = req.body.text;
     
     //Using email-addresses library to extract email details.
+    
     console.log({toNumberobj});
     console.log({toNumbers});
-     
+    console.log({distributionGroupNumbers}); 
     const numberAddresses = toNumbers.map( (item) => item.address);
     console.log(numberAddresses);
    //Start mobile number Iteration
