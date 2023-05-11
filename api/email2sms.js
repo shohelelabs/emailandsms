@@ -9,10 +9,10 @@ module.exports = async (req, res) => {
     await util.promisify(multer().any())(req, res);
 
     const from = req.body.from;
-    const toNumbers = req.body.to;
+    const toNumbers = Array.from(req.body.to);
     const subject = req.body.subject;
     const body = req.body.text;
-
+    
     //Using email-addresses library to extract email details.
     console.log({toNumbers});
     
