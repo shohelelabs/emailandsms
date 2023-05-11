@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
     
     //Using email-addresses library to extract email details.
     
-    console.log("distributionGroupNumbers:"+{distributionGroupNumbers}); 
+    console.log("distributionGroupNumbers:"+ distributionGroupNumbers); 
     const numberAddresses = toNumbers.map( (item) => item.address);
     console.log("numberAddresses:"+numberAddresses);
    //Start mobile number Iteration
