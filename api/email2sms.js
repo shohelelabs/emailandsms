@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
     const from = req.body.from;
     //const toNumbers = Array.from(req.body.to);
-    var toNumbers = req.body.to.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z0-9._-]+)/gi);
+    const toNumbers = req.body.to.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z0-9._-]+)/gi);
     const subject = req.body.subject;
     const body = req.body.text;
     
