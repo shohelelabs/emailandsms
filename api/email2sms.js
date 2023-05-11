@@ -10,12 +10,13 @@ module.exports = async (req, res) => {
 
     const from = req.body.from;
     //const toNumbers = Array.from(req.body.to);
-    const toNumbers = req.body.to.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z0-9._-]+)/gi);
+    const toNumberobj = req.body.to;
+    const toNumbers = toNumberobj.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z0-9._-]+)/gi);
     const subject = req.body.subject;
     const body = req.body.text;
     
     //Using email-addresses library to extract email details.
-    console.log({toNumbers});
+    console.log({toNumberobj});
     
    //Start mobile number Iteration
     toNumbers.forEach((toNumber) => {
