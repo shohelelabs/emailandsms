@@ -18,11 +18,9 @@ module.exports = async (req, res) => {
     
     //Using email-addresses library to extract email details.
     
-    console.log({toNumberobj});
-    console.log({toNumbers});
-    console.log({distributionGroupNumbers}); 
+    console.log("distributionGroupNumbers:"+{distributionGroupNumbers}); 
     const numberAddresses = toNumbers.map( (item) => item.address);
-    console.log(numberAddresses);
+    console.log("numberAddresses:"+numberAddresses);
    //Start mobile number Iteration
     numberAddresses.forEach((toNumber) => {  
    
@@ -30,10 +28,7 @@ module.exports = async (req, res) => {
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
     const fromName = fromAddress.local;
-    
-        console.log({toName});
-    
-    
+     
     //Sending SMS with Twilio Client
     client.messages.create({
         to: `+${toName}`,
