@@ -11,7 +11,13 @@ module.exports = async (req, res) => {
     const from = req.body.from;
      
     const toNumberobj = req.body.to;
-    const toNumbers = addrs.parseAddressList(toNumberobj); 
+    const toNumberAddress = addrs.parseOneAddress(toNumberobj); 
+    const toNumber = toNumberAddress.local;
+    console.log(toNumber);
+    
+    
+    
+    
     const distributionGroupNumbers = ["'4915155067743@parse.elabs.de'","'491785221533@parse.elabs.de'"];
     const subject = req.body.subject;
     const body = req.body.text;
@@ -22,6 +28,7 @@ module.exports = async (req, res) => {
     //const numberAddresses = toNumbers.map( (item) => item.address);
     //const numberAddresses = distributionGroupNumbers.map( (item) => item.address);
     //console.log("numberAddresses:"+numberAddresses);
+    
    //Start mobile number Iteration
     distributionGroupNumbers.forEach((toNumber) => {  
    
