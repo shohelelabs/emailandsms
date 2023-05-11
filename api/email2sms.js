@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     //Using email-addresses library to extract email details.
     console.log({toNumberobj});
     console.log({toNumbers});
-    var result = getFields(toNumbers, "local");
+    const result = getFields(toNumbers, "local");
     console.log(result);
    //Start mobile number Iteration
     toNumbers.forEach((toNumber) => {  
