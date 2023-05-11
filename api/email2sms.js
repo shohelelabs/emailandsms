@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
    //Start mobile number Iteration
     numberAddresses.forEach((toNumber) => {  
    
-    const toAddress = addrs.parseOneAddress(result);
+    const toAddress = addrs.parseOneAddress(toNumber);
     const toName = toAddress.local;
     const fromAddress = addrs.parseOneAddress(from);
     const fromName = fromAddress.local;
