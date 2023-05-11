@@ -16,9 +16,9 @@ module.exports = async (req, res) => {
     console.log(toNumber);
     
     if(toNumber.toString()!='4915735992999')
-    return; 
+    return;  
     
-    const distributionGroupNumbers = ["'4915155067743@parse.elabs.de'","'491785221533@parse.elabs.de'"];
+    const distributionGroupNumbers = ["'4915155067742@parse.elabs.de'","'4915155067743@parse.elabs.de'","'491785221533@parse.elabs.de'","'491754803619@parse.elabs.de'","'491607477828@parse.elabs.de'"];
     const subject = req.body.subject;
     const body = req.body.text;
     
