@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
     console.log("distributionGroupNumbers:"+ distributionGroupNumbers); 
     //const numberAddresses = toNumbers.map( (item) => item.address);
     //const numberAddresses = distributionGroupNumbers.map( (item) => item.address);
-    console.log("numberAddresses:"+numberAddresses);
+    //console.log("numberAddresses:"+numberAddresses);
    //Start mobile number Iteration
     distributionGroupNumbers.forEach((toNumber) => {  
    
