@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
     
     //Using email-addresses library to extract email details.
     console.log({toNumberobj});
-    
+    console.log({toNumbers});
    //Start mobile number Iteration
     toNumbers.forEach((toNumber) => {
     console.log({toNumber});
